@@ -130,7 +130,7 @@ Requiring clients to avoid calling existing resolution functions (eg, `addr` etc
 
 While compliant ENS clients will continue to refuse to resolve records without a resolver, there is still the risk that an improperly-configured client will refer to an incorrect resolver, or will not reject interactions with the null address when a resolver cannot be located.
 
-Additionally, resolvers supporting completely arbitrary wildcard subdomain resolution will increase the likelihood of funds being sent to unintended recipients as a result of typos. Applications that implement such resolvers should consider making additional name validation available to clients depending on the context, or implementing features that support recoverability of funds.
+Additionally, resolvers supporting completely arbitrary wildcard subdomain resolution will increase the likelihood of funds being sent to unintended recipients as a result of typos. Applications that implement such resolvers should consider making additional name validation available to clients depending on the context, or implementing features that support recovery of funds.
 
 There is also the possibility that some applications might require that no resolver be set for certain subdomains. For this to be problematic, the parent domain would need to successfully resolve the given subdomain node — to the knowledge of the authors, no application currently supports this feature or expects that subdomains should not resolve to a record.
 
